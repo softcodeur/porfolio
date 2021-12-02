@@ -1,0 +1,90 @@
+/* ---------------------------------------------------------------- */
+/* 06.Form(Input, Comment)                             
+/* ---------------------------------------------------------------- */
+.comments-wrap {
+    .comments-item {
+        background: $color_white;
+        margin-top: 30px;
+        .comments-title {
+            margin-bottom: 12px;
+        }
+        .comment-text {
+            margin-bottom: 10px;
+        }
+        .comments-reply-btn {
+            color: $color_primary;
+            text-transform: capitalize;
+            display: inline-block;
+            font-weight: 500;
+        }
+    }
+}
+.comment-block-mt {
+    margin-top: 30px;
+}
+.comment-form-group {
+    position: relative;
+    .comment-form-control {
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        padding: 18px 20px;
+        border: none;
+        transition: all 0.25s ease;
+        box-shadow: 0 10px 20px 0 $color_shadow;
+        &:focus {
+            box-shadow: 0 15px 30px 0 $color_shadow_hover;
+        }
+    }
+    button {
+        outline: none;
+    }
+}
+.contact-alerts {
+    .empty-form span, .success-form span, .email-invalid span {
+        display: block;
+        padding: 20px 18px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .empty-form span, .email-invalid span {
+        background: $color_danger_bg;
+	    color: $color_danger_text;
+    }
+    .success-form span {
+        color: $color_black;
+    }
+}
+.contact-form-group {
+    position: relative;
+    .form-input {
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        padding: 18px 60px;
+        border: none;
+        transition: all 0.25s ease;
+        box-shadow: 0 10px 20px 0 $color_shadow;
+        &:focus {
+            box-shadow: 0 15px 30px 0 $color_shadow_hover;
+        }
+        &.contact-text-area {
+            margin-bottom: 36px;
+        }
+     }
+     span {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        color: $color_primary;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: block;
+        background: $color_primary;
+        border:6px solid $color_white;
+        box-shadow: 0 5px 8px 0 $color_shadow_hover;
+     }
+}

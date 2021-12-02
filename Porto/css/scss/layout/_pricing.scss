@@ -1,0 +1,171 @@
+/* ---------------------------------------------------------------- */
+/* 19.Pricing                           
+/* ---------------------------------------------------------------- */
+// Resume Tab Link
+.price-toggle-wrap {
+	text-align: center;
+	display: inline-block;
+	margin: 0 auto 60px auto;
+	padding: 10px;
+	border-radius: 100px;
+    box-shadow: 0 10px 28px 0 $color_shadow;
+    a {
+        padding: 16px 40px;
+        float: left;
+        border-radius: 100px;
+        margin-right: 10px;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+        background-color: $color_primary_light;
+        color: $color_primary;
+        transition: all 0.25s linear;
+        &.active {
+            background-position: center;
+            background: $color_primary;
+            color: $color_white;
+        }
+    }
+}
+// Resume Tab Content
+.pricing-tab-content {
+    display: none;
+    &.active {
+        display: block;
+    }
+    .price-table {
+        border-radius: 5px;
+        text-align: center;
+        padding: 30px;
+        transition: all 0.25s linear;
+        box-shadow: 0 10px 20px 0 $color_shadow;
+        &:hover {
+            box-shadow: 0 15px 30px 0 $color_shadow_hover;
+        }
+        &:hover .price-icon > i {
+            animation: pulseOrange 1s 1 linear;
+            transform: scale(0.92);
+         }
+        &:hover .price-icon-shape-wrap {
+            animation: rotateIcon 1s ease-in-out forwards;
+        }
+        .price-icon {
+            position: relative;
+            display: inline-block;
+            padding: 20px;
+            .price-icon-shape-wrap {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                border:6px solid $color_primary;
+                .price-icon-shape {
+                    width: 24px;
+                    height: 24px;
+                    left: 50%;
+                    position: absolute;
+                    border-radius: 50%;
+                    background: $color_primary;
+                    border:6px solid $color_white;
+                    transform: translateX(-50%);
+                }
+                .price-icon-shape:nth-child(1) {
+                    top: -15px;
+                }
+                .price-icon-shape:nth-child(2) {
+                    bottom: -15px;
+                }
+            }
+            i {
+                display: inline-block;
+                height: 80px;
+                width: 80px;
+                text-align: center;
+                font-size: 32px;
+                line-height: 80px;
+                border-radius: 50%;
+                transition: all 0.25s ease;
+                background: $color_primary;
+                color:$color_white;
+            }
+        }
+        .price-value {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            span {
+                font-size: 1rem;
+            }
+            b {
+                font: {
+                    size: 3.2rem;
+                    weight: 700;
+                    family: $font_heading;
+                }
+                color: $color_dark_blue;
+            }
+        }
+        .price-text {
+            margin-bottom: 30px;
+            span {
+                text-align: center;
+                border-radius: 100px;
+                display: inline-block;
+                background: $color_primary;
+                padding: 11px 40px;
+                border:6px solid $color_white;
+                color: $color_white;
+                box-shadow: 0 5px 8px 0 $color_shadow_hover;
+                font: {
+                    size:1rem;
+                }
+            }
+        }
+        .price-list {
+            li {
+                margin-top: 15px;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+        .price-footer {
+            margin-top: 30px;
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+ * Medium devices (tablets, less than 992px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:991.98px) {
+    .price-table-resp:nth-child(3) {
+        margin-top: 30px;
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+ * Small devices (landscape phones, less than 768px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:767.98px) {
+    .price-table-resp {
+        margin-top: 30px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+/* Size reduced because it does not fit on this device
+ * Extra small devices (Iphone 5, less than 320px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:320px) {
+    // Resume Tab Link
+    .price-toggle-wrap {
+        a {
+            padding: 16px 25px;
+        }
+    }
+}
